@@ -13,6 +13,9 @@
     </div>
   </ul>
   <p><%= simple_format(@article.description) %></p>
+  <% if @article.categories.any? %>
+    <p>Categories: <%= render @article.categories %></p>
+  <% end %>
 </div>
 
 <div class="article-action col-xs-8 col-xs-offset-2">
